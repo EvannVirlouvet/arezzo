@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="74.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="arezzo.vue.VueTitre">
+   <children>
+      <Label fx:id="titre" alignment="CENTER" layoutX="580.0" layoutY="37.0" text="Sans Titre">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <MenuBar layoutY="1.0" prefHeight="27.0" prefWidth="1280.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Melodie">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#OnNouveauSelected" text="Nouveau" />
+                  <MenuItem mnemonicParsing="false" onAction="#OnOuvrirSelected" text="Ouvrir" />
+                  <MenuItem mnemonicParsing="false" onAction="#OnEnregistrerSelected" text="Enregistrer sous" />
+              <MenuItem mnemonicParsing="false" onAction="#OnQuitterSelected" text="Quitter" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Outils">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#OnRenomerSelected" text="Renomer" />
+                  <Menu mnemonicParsing="false" text="Transposer">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#OnTransposerSelected" text="vers les Graves" />
+                      <MenuItem mnemonicParsing="false" onAction="#OnversAiguSelected" text="vers les Aigu" />
+                    </items>
+                  </Menu>
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

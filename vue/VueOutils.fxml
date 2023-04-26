@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="200.0" prefWidth="1197.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="arezzo.vue.VueOutils">
+   <children>
+      <Pane layoutX="29.0" layoutY="44.0" prefHeight="249.0" prefWidth="479.0">
+         <children>
+            <Button fx:id="dodo" layoutY="-5.0" mnemonicParsing="false" onAction="#onDoButtonClick" prefHeight="205.0" prefWidth="70.0" style="-fx-background-color: white; -fx-border-color: grey;" />
+            <Button fx:id="mi" layoutX="142.0" layoutY="-5.0" mnemonicParsing="false" onAction="#onMiButtonClick" prefHeight="205.0" prefWidth="70.0" style="-fx-background-color: white; -fx-border-color: grey;" />
+            <Button fx:id="fa" layoutX="205.0" layoutY="-5.0" mnemonicParsing="false" onAction="#onFaButtonClick" prefHeight="205.0" prefWidth="70.0" style="-fx-background-color: white; -fx-border-color: grey;" />
+            <Button fx:id="silence" layoutY="211.0" mnemonicParsing="false" onAction="#onSilenceButtonClick" prefHeight="32.0" prefWidth="471.0" text="Silence" />
+            <Button fx:id="sol" layoutX="269.0" layoutY="-5.0" mnemonicParsing="false" onAction="#onSolButtonClick" prefHeight="205.0" prefWidth="70.0" style="-fx-background-color: white; -fx-border-color: grey;" />
+            <Button fx:id="la" layoutX="339.0" layoutY="-5.0" mnemonicParsing="false" onAction="#onLaButtonClick" prefHeight="205.0" prefWidth="70.0" style="-fx-background-color: white; -fx-border-color: grey;" />
+            <Button fx:id="re" layoutX="70.0" layoutY="-5.0" mnemonicParsing="false" onAction="#onReButtonClick" prefHeight="205.0" prefWidth="72.0" style="-fx-background-color: white; -fx-border-color: grey;" />
+            <Button fx:id="si" layoutX="409.0" layoutY="-5.0" mnemonicParsing="false" onAction="#onSiButtonClick" prefHeight="205.0" prefWidth="70.0" style="-fx-background-color: white; -fx-border-color: grey;" />
+            <Button fx:id="doNoire" layoutX="47.0" layoutY="-5.0" mnemonicParsing="false" onAction="#onDoNoireButtonClick" prefHeight="132.0" prefWidth="45.0" style="-fx-background-color: black;" />
+            <Button fx:id="reNoire" layoutX="120.0" layoutY="-5.0" mnemonicParsing="false" onAction="#onReNoireButtonClick" prefHeight="132.0" prefWidth="45.0" style="-fx-background-color: black;" />
+            <Button fx:id="faNoire" layoutX="247.0" layoutY="-5.0" mnemonicParsing="false" onAction="#onFaNoireButtonClick" prefHeight="132.0" prefWidth="45.0" style="-fx-background-color: black;" />
+            <Button fx:id="solNoire" layoutX="317.0" layoutY="-5.0" mnemonicParsing="false" onAction="#onSolNoireButtonClick" prefHeight="132.0" prefWidth="45.0" style="-fx-background-color: black;" />
+            <Button fx:id="laNoire" layoutX="386.0" layoutY="-5.0" mnemonicParsing="false" onAction="#onLaNoireButtonClick" prefHeight="132.0" prefWidth="45.0" style="-fx-background-color: black;" />
+         </children>
+      </Pane>
+      <Pane layoutX="508.0" layoutY="34.0" prefHeight="259.0" prefWidth="689.0" style="-fx-background-color: #f0f3e8;">
+         <children>
+            <Button layoutX="336.0" layoutY="18.0" mnemonicParsing="false" onAction="#onPLayButtonClick" prefHeight="38.0" prefWidth="60.0" style="-fx-background-color: #f0f3e8;">
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="126.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../ressources/bouton_play.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <RadioButton fx:id="grave" layoutX="17.0" layoutY="66.0" mnemonicParsing="false" onAction="#OnGraveSelected" text="Grave" toggleGroup="$octave"><toggleGroup><ToggleGroup fx:id="octave" /> </toggleGroup></RadioButton>
+            <RadioButton fx:id="medium" layoutX="17.0" layoutY="41.0" mnemonicParsing="false" onAction="#OnMediumSelected" selected="true" text="Medium" toggleGroup="$octave" />
+            <RadioButton fx:id="aigu" layoutX="17.0" layoutY="14.0" mnemonicParsing="false" onAction="#OnAiguSelected" text="Aigu" toggleGroup="$octave" />
+            <RadioButton fx:id="croche" layoutX="17.0" layoutY="199.0" mnemonicParsing="false" onAction="#OnCrocheSelected" selected="false" toggleGroup="$duree"><toggleGroup><ToggleGroup fx:id="duree" /> </toggleGroup>
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../ressources/croche.png" />
+                     </image>
+                  </ImageView>
+               </graphic></RadioButton>
+            <RadioButton fx:id="ronde" layoutX="17.0" layoutY="109.0" mnemonicParsing="false" onAction="#OnRondeSelected" selected="false" toggleGroup="$duree">
+               <graphic>
+                  <ImageView fitHeight="41.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../ressources/ronde.png" />
+                     </image>
+                  </ImageView>
+               </graphic></RadioButton>
+            <RadioButton fx:id="noire" layoutX="17.0" layoutY="133.0" mnemonicParsing="false" onAction="#OnNoireSelected" prefHeight="32.0" prefWidth="53.0" selected="true" toggleGroup="$duree">
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../ressources/noire.png" />
+                     </image>
+                  </ImageView>
+               </graphic></RadioButton>
+            <RadioButton fx:id="blanche" layoutX="17.0" layoutY="171.0" mnemonicParsing="false" onAction="#OnBlancheSelected" selected="false" toggleGroup="$duree">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../ressources/blanche.png" />
+                     </image>
+                  </ImageView>
+               </graphic></RadioButton>
+            <RadioButton layoutX="179.0" layoutY="227.0" mnemonicParsing="false" onAction="#OnPianoSelected" selected="true" text="Piano" toggleGroup="$instrument"><toggleGroup><ToggleGroup fx:id="instrument" /> </toggleGroup></RadioButton>
+            <RadioButton layoutX="272.0" layoutY="227.0" mnemonicParsing="false" onAction="#OnGuitareSelected" text="Guitare" toggleGroup="$instrument" />
+            <RadioButton layoutX="385.0" layoutY="227.0" mnemonicParsing="false" onAction="#OnTrompetteSelected" text="Trompette" toggleGroup="$instrument" />
+            <RadioButton layoutX="512.0" layoutY="227.0" mnemonicParsing="false" onAction="#OnSaxophoneSelected" text="Saxophone" toggleGroup="$instrument" />
+            <Slider fx:id="volume" layoutX="250.0" layoutY="83.0" onMouseReleased="#OnVolumeReleased" prefHeight="15.0" prefWidth="310.0" showTickLabels="true" showTickMarks="true" value="50.0" />
+            <Label layoutX="176.0" layoutY="83.0" text="Volume" />
+            <Slider fx:id="tempo" layoutX="250.0" layoutY="130.0" max="220.0" onMouseReleased="#OnTempoReleased" prefHeight="15.0" prefWidth="310.0" showTickLabels="true" showTickMarks="true" value="180.0" />
+            <Label layoutX="179.0" layoutY="133.0" text="Tempo" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
